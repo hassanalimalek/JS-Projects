@@ -93,7 +93,8 @@ button {
 .main-game-card {
   position: relative;
   max-width: 45rem;
-  min-width: 35rem;
+  width: 100%;
+  min-width: 5rem;
   text-align: center;
   margin: auto;
   padding: 1rem;
@@ -124,8 +125,19 @@ button {
 .game-content-wrapper {
   visibility: hidden;
 }
+.game-content-wrapper-initial {
+  animation: growIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+@keyframes growIn {
+  from {
+    transform: scale(0.4);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 .result-output {
-  font-size: 1.6rem;
+  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 2rem);
 }
 
 /* Playing Images */
@@ -174,7 +186,7 @@ button {
   text-align: center;
 }
 .scores-wrapper h3 {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 1.25rem);
   margin-bottom: 1rem;
   font-weight: bold;
 }
@@ -184,7 +196,7 @@ button {
   background-color: #2b2d42;
   color: white;
   padding: 1rem;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 1.1rem);
   border-radius: 6px;
   margin: auto;
 }
