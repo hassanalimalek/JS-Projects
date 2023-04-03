@@ -222,3 +222,17 @@ button {
   width: 3rem;
   margin-bottom: 0.8rem;
 }
+
+/* Mobile styles */
+@media only screen and (max-width: 45rem) {
+  .main-game-card {
+    max-width: 90%;
+    margin: auto;
+  }
+  .playing-img {
+    width: 3rem;
+  }
+  .choice-images-wrapper img {
+    width: 2.5rem;
+  }
+}
