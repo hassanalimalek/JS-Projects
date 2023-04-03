@@ -8,6 +8,7 @@ let processing = false;
 
 // References
 const startButton = document.querySelector('.start-btn');
+const startSection = document.querySelector('.start-section');
 const gameContentWrapper = document.querySelector('.game-content-wrapper');
 const imagesChoicewrapper = document.querySelector('.choice-images-wrapper');
 const resultOutputHeading = document.querySelector('.result-output');
@@ -82,6 +83,7 @@ let generateResult = (userChoice)=>{
 // Game start click
 startButton.addEventListener('click',()=>{
     startButton.classList.toggle('invisible')
+    startSection.classList.toggle('invisible')
     gameContentWrapper.classList.toggle('visible')
     gameContentWrapper.classList.toggle('game-content-wrapper-initial')
 }) 
