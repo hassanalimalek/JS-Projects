@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor</title>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./styles/index.css" />
+    <!-- JS -->
+    <script src="./js/index.js" defer></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="game-card-wrapper">
+      <div class="main-game-card">
+        <h2>Rock, Papers and Scissors</h2>
+        <div class="play-button-wrapper">
+          <button class="btn start-btn">Start</button>
+        </div>
+        <div class="game-content-wrapper">
+          <div class="playing-images-wrapper">
+            <img class="playing-img user-img" src="./assets/rock.png" />
+            <div>
+              <h3 class="result-output"></h3>
+              <button id="play-again" class="btn invisible">Play again</button>
+            </div>
+
+            <img class="playing-img comp-img" src="./assets/rock.png" />
+          </div>
+          <div class="scores-wrapper">
+            <div class="user-score-wrapper">
+              <h3>User</h3>
+              <p id="user-score">0</p>
+            </div>
+            <div class="round-score-wrapper">
+              <h3>Rounds</h3>
+              <p id="round-number">0</p>
+            </div>
+            <div class="computer-score-wrapper">
+              <h3>Computer</h3>
+              <p id="computer-score">0</p>
+            </div>
+          </div>
+          <div class="choice-images-wrapper">
+            <div class="choice" id="ROCK">
+              <img src="./assets/rock.png" />
+              <p>Rock</p>
+            </div>
+            <div class="choice" id="PAPER">
+              <img src="./assets/paper.png" />
+              <p>Paper</p>
+            </div>
+            <div class="choice" id="SCISSOR">
+              <img src="./assets/scissors.png" />
+              <p>Scissors</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

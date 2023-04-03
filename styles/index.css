@@ -1,0 +1,212 @@
+/* -------------- */
+/* Reset */
+/* -------------- */
+/* Box Sizing */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/* Set up body */
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  background-color: #2b2d42;
+  color: white;
+  /* margin: 1.5em; */
+}
+
+/* Picture and Images width control */
+picture,
+img {
+  max-width: 100%;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+a {
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+button {
+  cursor: pointer;
+}
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* -------------- */
+/* Util */
+/* -------------- */
+.visible {
+  visibility: visible !important;
+}
+.invisible {
+  visibility: hidden !important;
+}
+
+/* Game card */
+
+.game-card-wrapper {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.main-game-card {
+  position: relative;
+  max-width: 45rem;
+  min-width: 35rem;
+  text-align: center;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: white;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.btn {
+  padding: 1rem 2.4rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #2b2d42;
+  transition: all 0.3s;
+  color: white;
+}
+.start-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.start-btn:hover {
+  background-color: #6e73a8;
+}
+
+/* Game content wrapper */
+.game-content-wrapper {
+  visibility: hidden;
+}
+.result-output {
+  font-size: 1.6rem;
+}
+
+/* Playing Images */
+.playing-images-wrapper {
+  margin: 4rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+.playing-img {
+  width: 5rem;
+}
+.playing-img.user-img {
+  transform: rotate(90deg);
+}
+
+/* Result generation animation */
+.generate-user-result {
+  animation: userShake 0.7s ease infinite;
+}
+@keyframes userShake {
+  50% {
+    transform: rotate(80deg);
+  }
+}
+.playing-img.comp-img {
+  transform: scaleX(-1) rotate(90deg);
+}
+.generate-cpu-result {
+  animation: cpuShake 0.7s ease infinite;
+}
+@keyframes cpuShake {
+  50% {
+    transform: scaleX(-1) rotate(70deg);
+  }
+}
+
+/* Score  */
+.scores-wrapper {
+  display: flex;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3rem 0;
+  text-align: center;
+}
+.scores-wrapper h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.scores-wrapper p {
+  width: 60px;
+  background-color: #2b2d42;
+  color: white;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  margin: auto;
+}
+.round-score-wrapper {
+  margin-left: 1rem;
+}
+
+/* Choices */
+
+.choice-images-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.choice {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.choice:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.choice-images-wrapper img {
+  width: 3rem;
+  margin-bottom: 0.8rem;
+}
