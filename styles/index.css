@@ -104,12 +104,14 @@ button {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .btn {
-  padding: 1rem 2.4rem;
+  padding: 0.6rem 1.6rem;
+  font-size: 1rem;
   border: none;
   border-radius: 6px;
   background-color: #2b2d42;
   transition: all 0.3s;
   color: white;
+  letter-spacing: 1.5px;
 }
 .start-section {
   position: absolute;
@@ -119,7 +121,10 @@ button {
   transform: translate(-50%, -50%);
 }
 .start-section h3 {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+}
+.start-section p {
+  margin-bottom: 1.1rem;
 }
 .start-btn:hover {
   background-color: #6e73a8;
@@ -130,11 +135,11 @@ button {
   visibility: hidden;
 }
 .game-content-wrapper-initial {
-  animation: growIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  animation: growIn 3s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 @keyframes growIn {
   from {
-    transform: scale(0.4);
+    transform: scale(0);
   }
   to {
     transform: scale(1);
@@ -142,6 +147,7 @@ button {
 }
 .result-output {
   font-size: clamp(0.8rem, -0.875rem + 8.333vw, 2rem);
+  margin-bottom: 0.6rem;
 }
 
 /* Playing Images */

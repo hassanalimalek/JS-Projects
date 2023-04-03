@@ -25,7 +25,14 @@ const playAgainBtnSelector = document.querySelector('#play-again');
 const checkGameCompletion = ()=>{
     if(totalRounds === rounds){
         playAgainBtnSelector.classList.toggle('invisible')
-        resultOutputHeading.classList.toggle('invisible')
+        if(userScore === compScore){
+            resultOutputHeading.innerText = 'It was a draw'
+        }
+        else if(userScore > compScore){
+            resultOutputHeading.innerText = 'You won !'
+        }else{
+            resultOutputHeading.innerText = 'You lost !'
+        }
     }
 }
 const changeScore=(winner)=>{
@@ -67,13 +74,13 @@ let generateResult = (userChoice)=>{
         }else{
             result = 1
         }
-        changeScore(result)
+      
         userImg.classList.toggle('generate-user-result');
         compImg.classList.toggle('generate-cpu-result');
-        console.log("`../assets/${choices[userChoiceIndex].toLowerCase.png}` -->",`../assets/${choices[userChoiceIndex].toLowerCase()}.png`)
         userImg.src = (`../assets/${choices[userChoiceIndex].toLowerCase()}.png`)
         compImg.src = (`../assets/${choices[compChoiceIndex].toLowerCase()}.png`)
         resultOutputHeading.innerText = resultMsg[result]
+        changeScore(result)
         processing = false;
      
     },[2000])
@@ -97,7 +104,6 @@ playAgainBtnSelector.addEventListener('click',()=>{
     // Resetting
     playAgainBtnSelector.classList.toggle('invisible')
     resultOutputHeading.innerText = ''
-    resultOutputHeading.classList.toggle('invisible')
     userScore = 0;
     compScore = 0;
     rounds = 0;
@@ -109,7 +115,7 @@ playAgainBtnSelector.addEventListener('click',()=>{
 // User option click
 imagesChoicewrapper.addEventListener('click', (e)=>{
     let userSelection = e.target.parentElement.id;
-    if(!processing){
+    if(!processing && rounds < totalRounds){
         userImg.src = (`../assets/rock.png`)
         compImg.src = (`../assets/rock.png`)
         // Toggle animation
@@ -117,6 +123,5 @@ imagesChoicewrapper.addEventListener('click', (e)=>{
         compImg.classList.toggle('generate-cpu-result');
         generateResult(userSelection)
     }
-  
 
 })
