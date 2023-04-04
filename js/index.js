@@ -77,8 +77,8 @@ let generateResult = (userChoice)=>{
       
         userImg.classList.toggle('generate-user-result');
         compImg.classList.toggle('generate-cpu-result');
-        userImg.src = (`../assets/${choices[userChoiceIndex].toLowerCase()}.png`)
-        compImg.src = (`../assets/${choices[compChoiceIndex].toLowerCase()}.png`)
+        userImg.src = (`./assets/${choices[userChoiceIndex].toLowerCase()}.png`)
+        compImg.src = (`./assets/${choices[compChoiceIndex].toLowerCase()}.png`)
         resultOutputHeading.innerText = resultMsg[result]
         changeScore(result)
         processing = false;
@@ -116,8 +116,8 @@ playAgainBtnSelector.addEventListener('click',()=>{
 imagesChoicewrapper.addEventListener('click', (e)=>{
     let userSelection = e.target.parentElement.id;
     if(!processing && rounds < totalRounds){
-        userImg.src = (`../assets/rock.png`)
-        compImg.src = (`../assets/rock.png`)
+        userImg.src = (`./assets/rock.png`)
+        compImg.src = (`./assets/rock.png`)
         // Toggle animation
         userImg.classList.toggle('generate-user-result');
         compImg.classList.toggle('generate-cpu-result');
