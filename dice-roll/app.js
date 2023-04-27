@@ -3,6 +3,7 @@ const diceImg = document.querySelector('.dice__image')
 const diceResultDiv = document.querySelector('.dice__result')
 
 
+// Roll button listener
 rollDiceBtn.addEventListener('click',()=>{
     diceResultDiv.classList.add('dice__animate')
     setTimeout(()=>{
