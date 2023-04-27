@@ -1,0 +1,14 @@
+[
+  {
+    "question": "When was javascript created",
+    "answer": "JavaScript was inventedin 1995. It was developed for Netscape 2, and became the ECMA-262 standard in 1997"
+  },
+  {
+    "question": "Who was javascript created",
+    "answer": "JavaScript was invented by Brendan Eich"
+  },
+  {
+    "question": "How is JS spelled",
+    "answer": "Javascript, Nope, you need to capitalize the 's'. It's camel case, like all the worst programming languages."
+  }
+]
