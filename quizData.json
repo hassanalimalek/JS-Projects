@@ -1,0 +1,12 @@
+[
+  {
+    "question": "Who is the first president of USA?",
+    "options": ["Barrack", "Nelson", "George", "Kennedy"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "When was Javascript created?",
+    "options": ["June 1995", "May 1995", "July 1885", "Sep 1996"],
+    "correctAnswerIndex": 1
+  }
+]

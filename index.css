@@ -19,6 +19,7 @@
   --light-black: #282a39;
   --font-body-stack: Raleway, Charcoal, sans-serif;
   --font-heading-stack: 'PT Serif', sans-serif;
+  --container-width: 768px;
 }
 
 /* Reset margins */
@@ -80,4 +81,107 @@ a {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: auto;
+}
+
+/* Quiz Question */
+.quiz-container {
+  padding: 4rem 2rem;
+}
+
+/* Quiz Question Header */
+.quiz-question-header {
+  text-align: center;
+  font-family: var(--font-heading-stack);
+}
+.quiz-question {
+  margin-bottom: 1rem;
+}
+.question-indexes {
+  margin-bottom: 1.5rem;
+}
+
+/* Quiz progress */
+.quiz-progress {
+  margin: auto;
+  min-width: 100px;
+  width: 40%;
+  background-color: var(--light-white);
+  height: 8px;
+  margin-bottom: 1.5rem;
+}
+.quiz-progress-inner {
+  background-color: var(--main-theme-color);
+  width: 0;
+  height: 8px;
+  border-right: 2px solid black;
+  border-radius: 8px;
+}
+.quiz-progress-text {
+  color: var(--light-gray);
+  margin-bottom: 2.5rem;
+}
+
+/* Quiz options */
+.quiz-options {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.quiz-option {
+  width: 48%;
+  background-color: var(--light-white);
+  color: var(--light-black);
+  letter-spacing: 0.8px;
+  font-size: 1rem;
+  display: flex;
+}
+.quiz-option input {
+  opacity: 0;
+}
+.quiz-option input:checked + label i {
+  background: url(./images/circle-filled.svg);
+  background-size: 30px;
+  height: 30px;
+  width: 30px;
+  margin-right: 15px;
+}
+.quiz-option label i {
+  background: url(./images/circle-outline.svg);
+  background-size: 30px;
+  height: 30px;
+  width: 30px;
+  margin-right: 15px;
+}
+.quiz-option label {
+  display: flex;
+  align-items: center;
+  padding: 2rem 2rem;
+  width: 100%;
+  background-color: var(--light-white);
+}
+
+/* Quiz Actions */
+.quiz-actions {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.quiz-action-btn {
+  display: block;
+  width: 100%;
+  border: 1px solid black;
+  color: var(--light-black);
+  background-color: white;
+  padding: 1rem;
+  cursor: pointer;
+}
+.quiz-action-btn:first-child {
+  border-bottom: 0;
 }

@@ -5,6 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container quiz-container quiz">
+      <header class="quiz-question-header">
+        <h1 class="quiz-question"></h1>
+        <p class="question-indexes">
+          <span class="current-question-index"></span> of
+          <span class="last-question-index"></span>
+        </p>
+        <div class="quiz-progress">
+          <div class="quiz-progress-inner"></div>
+        </div>
+        <h3 class="quiz-progress-text"></h3>
+      </header>
+      <div class="quiz-options"></div>
+      <div class="quiz-actions">
+        <button class="quiz-action-btn next">Next</button>
+        <button class="quiz-action-btn restart">Restart</button>
+      </div>
+    </div>
+    <script src="js/app.js" type="module" defer></script>
+    <script src="js/question.js" type="module" defer></script>
+    <script src="js/quiz.js" type="module" defer></script>
+  </body>
 </html>
