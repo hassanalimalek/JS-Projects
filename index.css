@@ -100,6 +100,7 @@ a {
 }
 .quiz-question {
   margin-bottom: 1rem;
+  font-size: clamp(1.6rem, -0.875rem + 8.333vw, 2.4rem);
 }
 .question-indexes {
   margin-bottom: 1.5rem;
@@ -188,4 +189,19 @@ a {
 }
 .quiz-action-btn:first-child {
   border-bottom: 0;
+}
+
+@media screen and (max-width: 465px) {
+  .quiz-container {
+    padding: 1.5rem;
+  }
+  .quiz-options {
+    margin-bottom: 1.5rem;
+  }
+  .quiz-option {
+    width: 100%;
+  }
+  .quiz-option label {
+    padding: 1rem;
+  }
 }
