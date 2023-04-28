@@ -8,5 +8,29 @@
     "question": "When was Javascript created?",
     "options": ["June 1995", "May 1995", "July 1885", "Sep 1996"],
     "correctAnswerIndex": 1
+  },
+  {
+    "question": "What does CSS stand for?",
+    "options": [
+      "County Sheriff Service",
+      "Cascading Super Styles",
+      "Cascading Style Sheet"
+    ],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "The full form of html is...",
+    "options": [
+      "Hyper Text Markup Language",
+      "Hyper Text Mean Language",
+      "Happy Text Markup Language",
+      "None"
+    ],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "console.log(typeof []) would return that?",
+    "options": ["Array", "Object", "Null", "array"],
+    "correctAnswerIndex": 1
   }
 ]

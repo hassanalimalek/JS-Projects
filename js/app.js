@@ -3,7 +3,6 @@ import Quiz from "./quiz.js";
 import QuizData from '../quizData.json' assert { type: "json" }
 
 // Dom query
-const quizEl = document.querySelector('.quiz');
 const quizQuestionEl = document.querySelector(".quiz-question");
 const currentQuestionIndexEl = document.querySelector('.current-question-index');
 const lastQuestionIndexDivEl = document.querySelector('.last-question-index');
@@ -75,23 +74,19 @@ const renderAll = _=>{
         // Render Ended screen
         setElValue(quizQuestionEl,getQuizCompletionTitleMessage(quiz))
         setElValue(currentQuestionIndexEl,'Score : ')
-        setElValue(lastQuestionIndexDivEl, (quiz.score) /quiz.questions.length * 100)
+        setElValue(lastQuestionIndexDivEl, Math.round((quiz.score) /quiz.questions.length * 100))
         setElValue(quizProgressTextEl,`Quiz Complete`)
         nextButtonEl.style.opacity = 0;
 
     }else{
         let currentQuestion = quiz.getCurrentQuestion();
-        console.log("currentquestion -->",currentQuestion)
-        console.log(" -quizQuestionEl -->",quizQuestionEl)
         // Updating question
         setElValue(quizQuestionEl,currentQuestion.question)
         // Render Choices
         renderChoices(currentQuestion.options)
-
         // Updating question number
         setElValue(currentQuestionIndexEl,`${quiz.currentQuestionIndex + 1} of`);
         setElValue(lastQuestionIndexDivEl,quiz.questions.length)
-    
         // Updating quiz progress text
         setElValue(quizProgressTextEl,'Pick an option below!')
 
@@ -103,7 +98,6 @@ renderAll();
 nextButtonEl.addEventListener('click',(e)=>{
     if(!quiz.hasEnded()){
         const inputChoice =  document.querySelector('input[name="choice"]:checked');
-        console.log("inputChoice --->",inputChoice)
         if(inputChoice?.checked){
             let currentQuestion = quiz.getCurrentQuestion();
             // Correct Answer case
