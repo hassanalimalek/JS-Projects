@@ -37,17 +37,35 @@ const renderChoices = (choices) =>{
 }
 const renderProgress = (quiz)=>{
     let width = quizProgressInnerEl.style.width ?  quizProgressInnerEl.style.width.slice(0,quizProgressInnerEl.style.width.length-1) : 0;
-    let increaseWidthTo = (quiz.currentQuestionIndex+1) /quiz.questions.length * 100;
-    let loadingInterval = setInterval(()=>{
-        if(width > increaseWidthTo){
-            clearInterval(loadingInterval)
-        }else{
-            width++;
-            quizProgressInnerEl.style.width= `${width}%`
-        }
-    },3)
+    let increaseWidthTo = (quiz.currentQuestionIndex) /quiz.questions.length * 100;
+    if(increaseWidthTo == 0){
+        quizProgressInnerEl.style.width = `0%`
+    }else{
+        let loadingInterval = setInterval(()=>{
+            if(width > increaseWidthTo){
+                clearInterval(loadingInterval)
+            }else{
+                width++;
+                quizProgressInnerEl.style.width= `${width}%`
+            }
+        },3)
+    }
    
+}
 
+const getQuizCompletionTitleMessage=(quiz)=>{
+    let scorePercentage = (quiz.score) /quiz.questions.length * 100;
+    let msg = ''
+    if(scorePercentage === 100){
+        msg = 'Excellent'
+    }else if(scorePercentage >=70){
+        msg = 'Splendid Job'
+    }else if(scorePercentage >0){
+        msg = 'Good Job'
+    }else{
+        msg = 'Better luck next time'
+    }
+    return msg;
 }
 
 const renderAll = _=>{
@@ -55,9 +73,11 @@ const renderAll = _=>{
     renderProgress(quiz);
     if(quiz.hasEnded()){
         // Render Ended screen
-        console.log("quiz ended @@@")
-        console.log(quiz.score)
-        setElValue(quizProgressTextEl,quiz.hasEnded() ? `Quiz Complete \n Quiz Score : ${quiz.score}` : 'Pick an option below!')
+        setElValue(quizQuestionEl,getQuizCompletionTitleMessage(quiz))
+        setElValue(currentQuestionIndexEl,'Score : ')
+        setElValue(lastQuestionIndexDivEl, (quiz.score) /quiz.questions.length * 100)
+        setElValue(quizProgressTextEl,`Quiz Complete`)
+        nextButtonEl.style.opacity = 0;
 
     }else{
         let currentQuestion = quiz.getCurrentQuestion();
@@ -69,11 +89,11 @@ const renderAll = _=>{
         renderChoices(currentQuestion.options)
 
         // Updating question number
-        setElValue(currentQuestionIndexEl,quiz.currentQuestionIndex + 1);
+        setElValue(currentQuestionIndexEl,`${quiz.currentQuestionIndex + 1} of`);
         setElValue(lastQuestionIndexDivEl,quiz.questions.length)
     
         // Updating quiz progress text
-        setElValue('Quiz Complete')
+        setElValue(quizProgressTextEl,'Pick an option below!')
 
     }
 }
@@ -82,12 +102,12 @@ renderAll();
 // Next Button Click
 nextButtonEl.addEventListener('click',(e)=>{
     if(!quiz.hasEnded()){
-        const inputChoice =  document.getElementsByName('choice');
-        var selectValue= Array.from(inputChoice).find(radio => radio.checked);
-        if(selectValue){
+        const inputChoice =  document.querySelector('input[name="choice"]:checked');
+        console.log("inputChoice --->",inputChoice)
+        if(inputChoice?.checked){
             let currentQuestion = quiz.getCurrentQuestion();
             // Correct Answer case
-            if(currentQuestion.correctAnswerIndex == selectValue.value){
+            if(currentQuestion.correctAnswerIndex == inputChoice.value){
                 console.log("Correct answer")
                 quiz.score++;
                 quiz.currentQuestionIndex++
@@ -101,6 +121,13 @@ nextButtonEl.addEventListener('click',(e)=>{
             }
         }
     }
+})
+
+// Restart Button Click
+restartButtonEl.addEventListener('click',()=>{
+    quiz.reset()
+    nextButtonEl.style.opacity = 1;
+    renderAll()
 })
 
 

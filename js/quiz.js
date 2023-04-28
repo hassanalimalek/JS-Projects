@@ -13,7 +13,10 @@ Quiz.prototype.nextQuestion = function(){
     this.currentQuestionIndex++;
 }
 
-
 Quiz.prototype.getCurrentQuestion = function(){
     return this.questions[this.currentQuestionIndex]
+}
+Quiz.prototype.reset = function(){
+    this.score=0;
+    this.currentQuestionIndex=0;
 }
