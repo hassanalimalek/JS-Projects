@@ -16,7 +16,10 @@ Give a ⭐️ if this project helped you
 
 ## Demo
 
-https://user-images.githubusercontent.com/69761391/235204675-ee9875be-91a6-442f-977a-cea6ae541be8.mov
-!
+
+https://user-images.githubusercontent.com/69761391/235204875-396fea05-4ce3-45f3-a9dc-dfcacb58b78b.mov
+
+
+
 
 ***
