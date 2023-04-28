@@ -2,7 +2,7 @@
 <p>
 </p>
 
-> Quiz-app build using HTML5,CSS3 and JS. Uses object oriented paradigm to create quiz questions and eventually creating quiz from those questions. 
+Quiz-app build using HTML5,CSS3 and JS. Uses object oriented paradigm to create quiz questions and eventually creating quiz from those questions. 
 
 ## Author
 
