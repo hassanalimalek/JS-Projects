@@ -3,36 +3,42 @@
     "url": "https://docs.google.com/uc?export=download&id=1QcLWf2tyelM5d_D2UPD7RHn4feoZL_m7",
     "name": "Yellow",
     "artist": "Coldplay",
-    "coverArt": "https://i.scdn.co/image/ab67616d0000b2733d92b2ad5af9fbc8637425f0"
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b2733d92b2ad5af9fbc8637425f0",
+    "duration": "4:29"
   },
   {
-    "url": "https://docs.google.com/uc?export=download&id=12YtkqlmpalG_tEsMEW0MasWpZB6Sk6Ws",
+    "url": "https://docs.google.com/uc?export=download&id=1zwfX02unnW5bpIsI5ZIWHomC9NznyNHa",
     "name": "Another Love",
     "artist": "Tom Odell",
-    "coverArt": "https://i.scdn.co/image/ab67616d0000b2731917a0f3f4152622a040913f"
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b2731917a0f3f4152622a040913f",
+    "duration": "4:04"
   },
   {
     "url": "https://docs.google.com/uc?export=download&id=196eVxsYYpWf3zLmnuFe_PP-VnnfTZGhd",
     "name": "Gul",
     "artist": "Anuv Jain",
-    "coverArt": "https://c.saavncdn.com/266/Gul-Hindi-2021-20210706151615-500x500.jpg"
+    "coverArt": "https://c.saavncdn.com/266/Gul-Hindi-2021-20210706151615-500x500.jpg",
+    "duration": "3:45"
   },
   {
-    "url": "https://docs.google.com/uc?export=download&id=d/1RU72W1O6I0OAklCeqD3mqYpwdehLGzH3",
+    "url": "https://docs.google.com/uc?export=download&id=1RU72W1O6I0OAklCeqD3mqYpwdehLGzH3",
     "name": "RunAway",
     "artist": "Aurora",
-    "coverArt": "https://i1.sndcdn.com/artworks-000106115171-y1yk0z-t500x500.jpg"
+    "coverArt": "https://i1.sndcdn.com/artworks-000106115171-y1yk0z-t500x500.jpg",
+    "duration": "4:10"
   },
   {
     "url": "https://docs.google.com/uc?export=download&id=1cVq2ZtFEQfHYeELGdjT1tc-glTsbdzw4",
     "name": "Shape of you",
     "artist": "Ed Sheeran",
-    "coverArt": "https://upload.wikimedia.org/wikipedia/en/b/b4/Shape_Of_You_%28Official_Single_Cover%29_by_Ed_Sheeran.png"
+    "coverArt": "https://upload.wikimedia.org/wikipedia/en/b/b4/Shape_Of_You_%28Official_Single_Cover%29_by_Ed_Sheeran.png",
+    "duration": "4:23"
   },
   {
     "url": "https://docs.google.com/uc?export=download&id=1O4Assewg4OrkhTiDCtKeq6X1wdcUQWJk",
     "name": "All i want",
     "artist": "Kodaline",
-    "coverArt": "https://i.scdn.co/image/ab67616d0000b273035c9c7c3baeb74a7b68e932"
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b273035c9c7c3baeb74a7b68e932",
+    "duration": "5:19"
   }
 ]
