@@ -3,13 +3,20 @@
   <img alt="Version" src="https://img.shields.io/badge/version-V1-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> Music PlayerX is music player app build using HTML5,CSS3 and JS. App provides the option to play music from a list of songs provided via json file with the option to pause and restart a song. User can also see elapsed duration using the progress trackbar at top. App is mobile responsive adjusts accordingly to mobile views&#34;
+Music PlayerX is music player app build using HTML5,CSS3 and JS. App provides the option to play music from a list of songs provided via json file with the option to pause and restart a song. User can also see elapsed duration using the progress trackbar at top. App is mobile responsive adjusts accordingly to mobile views&#34;
 
 ## Author
 
 👤 **Hassan Ali**
 
 * Github: [@hassanalimalek](https://github.com/hassanalimalek)
+
+## Demo
+
+
+https://user-images.githubusercontent.com/69761391/235316078-5e892b8e-9662-44e7-806c-106563e045ee.mov
+
+
 
 ## Show your support
 
