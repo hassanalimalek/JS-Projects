@@ -17,7 +17,6 @@ export const DurationTracker = (()=>{
     
     const init = ()=>{
         render();
-        listeners();
     }
     const render = ()=>{
         progressInnerEl.style.width = `${width}%`;

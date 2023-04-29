@@ -69,7 +69,6 @@ export const PlayList = (()=>{
             // Play button toggle
             if(e.target.id === 'playToggle'){
                 if(e.target.dataset.index == currentSongIndex){
-                    console.log('-',currentSong.paused)
                     playPauseToggle()
                    
                 }
@@ -77,7 +76,6 @@ export const PlayList = (()=>{
                 else{
                     currentSongIndex = e.target.dataset.index;
                     currentSong.src = SongsList[currentSongIndex].url;
-                    currentSongObj = SongsList[currentSongIndex];
                     playPauseToggle()
                 }
                 render()
@@ -92,7 +90,6 @@ export const PlayList = (()=>{
         })
         // Updating time duration
         currentSong.addEventListener("timeupdate", function() {
-            console.log("Current play duration: " + currentSong.currentTime);
             DurationTracker.setState({
                 currentDuration:currentSong.currentTime,
                 totalDuration:currentSong.duration
