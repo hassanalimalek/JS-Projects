@@ -43,7 +43,6 @@ export const PlayInfo = (()=>{
     }
     const listeners = ()=>{
         playBtnMainEl.addEventListener('click',()=>{
-            // console.log(" -->",PlayList)
             PlayList.playPauseToggle()
             PlayList.render()
             render()
