@@ -17,7 +17,6 @@ export const Game = ( _=>{
     const init=()=>{
         // 1. Choose a guessing word
         chosenWord = chooseWord();
-        console.log("-->",chosenWord);
         // 2. Build out guessing word to render
         guessingWord = Array(chosenWord.length).fill('_')
         
@@ -87,7 +86,6 @@ export const Game = ( _=>{
     }
 
     const check = (guess)=>{
-        console.log("check-->",guess)
         if(isAlreadyTaken(guess)) return;
 
         guesses.push(guess);
