@@ -4,7 +4,7 @@ import { How } from './how.js';
 export const Home = ( _=>{
     const $hangman = document.querySelector('.hangman');
 
-    console.log("Home @@@@@@")
+
     const init=()=>{
         console.log("Home @@@@@@")
         render();
