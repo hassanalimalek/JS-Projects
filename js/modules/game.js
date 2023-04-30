@@ -1,6 +1,7 @@
 import { Home } from "./home.js";
 import { sound } from "../data/sound.js";
 import { End } from "./end.js";
+import { Board } from "./board.js";
 
 export const Game = ( _=>{
     const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -25,8 +26,9 @@ export const Game = ( _=>{
         // 3. Show initial screen
         showInitPage()
 
-        // render();
         listeners();
+        // Setting up the canvas board
+        Board.init()
 
     }
 
@@ -55,7 +57,6 @@ export const Game = ( _=>{
     const createletters = ()=>{
         let markup = ``;
         letters.forEach(letter=>{
-            console.log("isAlreadyTaken--->",isAlreadyTaken())
             const isActive = isAlreadyTaken(letter) ? 'hangman__letter--active' :''
             markup += `
                 <li class='hangman__letter ${isActive}'>${letter}</li>
@@ -97,6 +98,7 @@ export const Game = ( _=>{
             console.log("--->",guessingWord)
         }else{
             lives--;
+            Board.setLives(lives);
             // render the board accordingly
         }
         render();
