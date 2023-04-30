@@ -1,11 +1,12 @@
 import { Home } from "./home.js";
 import { sound } from "../data/sound.js";
+import { End } from "./end.js";
 
 export const Game = ( _=>{
     const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     const words = ['dog','cat','bat','elephant','food'];
     let lives;
-    let choosenWord;
+    let chosenWord;
     let guessingWord;
     let guesses;
 
@@ -14,10 +15,10 @@ export const Game = ( _=>{
 
     const init=()=>{
         // 1. Choose a guessing word
-        choosenWord = chooseWord();
-        console.log("-->",choosenWord);
+        chosenWord = chooseWord();
+        console.log("-->",chosenWord);
         // 2. Build out guessing word to render
-        guessingWord = Array(choosenWord.length).fill('_')
+        guessingWord = Array(chosenWord.length).fill('_')
         
         guesses = [];
         lives= 7;
@@ -71,8 +72,6 @@ export const Game = ( _=>{
                 check(event.target.innerHTML)
                 
             }
-
-
             // Main menu click
             if(event.target.matches('.hangman__trigger')){
                 sound.click.play()
@@ -92,7 +91,7 @@ export const Game = ( _=>{
 
         guesses.push(guess);
         // check if guess exists in chosenword
-        if(choosenWord.includes(guess)){
+        if(chosenWord.includes(guess)){
             // Update the guessing word
             updateGuessingWord(guess);
             console.log("--->",guessingWord)
@@ -105,23 +104,31 @@ export const Game = ( _=>{
         isGameOver();
     }
 
-    const hasWon  = _ =>guessingWord.join('') === choosenWord;
+    const hasWon  = _ =>guessingWord.join('') === chosenWord;
     const hasLost = _ => lives <=0;
     const isGameOver = ()=>{
 
         if(hasWon()){
-            alert("You have won")
+            // alert("You have won")
             sound.win.play();
+            End.setState({
+                winOrLose:'Win',
+                chosenWord
+            })
         }
         if(hasLost()){
-            alert("You have lost")
+            // alert("You have lost")
             sound.lose.play();
+            End.setState({
+                winOrLose:'Loose',
+                chosenWord
+            })
         }
     }
 
     const updateGuessingWord = (letter)=>{
         console.log("update guessing workd -->",letter)
-        choosenWord.split('').forEach((elem,index)=>{
+        chosenWord.split('').forEach((elem,index)=>{
             if(elem === letter){
                 guessingWord[index] = elem;
             }
