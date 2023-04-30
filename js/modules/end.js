@@ -15,12 +15,10 @@ export const End = ( _=>{
     }
    
     const init=()=>{
-        console.log("End @@@ @@@@@@")
         render();
 
     }
     const render = ()=>{
-        console.log("render now @@@",state)
         let markup = `
         <h1 class="hangman__title">Game Over</h1>
         <p class="result">${state.winOrLose.toUpperCase()} !</br>

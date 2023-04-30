@@ -40,7 +40,6 @@ export const Board = ( _=>{
         context = canvas.getContext('2d')
         context.lineWidth = '2';
         context.strokeStyle = "white";
-        console.log("context --->",context);
         // Base Lines
         line1()
         line2();
@@ -56,10 +55,6 @@ export const Board = ( _=>{
         context.stroke();
     }
     
-
-
-
-
     return {
         init,
         setLives
