@@ -8,7 +8,7 @@ export const End = ( _=>{
     const $hangman = document.querySelector('.hangman');
 
     const setState = obj =>{
-        console.log("obje--->",obj)
+
         state.chosenWord = obj.chosenWord;
         state.winOrLose = obj.winOrLose;
         render();

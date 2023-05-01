@@ -93,7 +93,7 @@ export const Game = ( _=>{
         if(chosenWord.includes(guess)){
             // Update the guessing word
             updateGuessingWord(guess);
-            console.log("--->",guessingWord)
+       
         }else{
             lives--;
             Board.setLives(lives);
@@ -127,7 +127,7 @@ export const Game = ( _=>{
     }
 
     const updateGuessingWord = (letter)=>{
-        console.log("update guessing workd -->",letter)
+
         chosenWord.split('').forEach((elem,index)=>{
             if(elem === letter){
                 guessingWord[index] = elem;

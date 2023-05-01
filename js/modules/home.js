@@ -6,7 +6,7 @@ export const Home = ( _=>{
 
 
     const init=()=>{
-        console.log("Home @@@@@@")
+
         render();
         listener();
 
