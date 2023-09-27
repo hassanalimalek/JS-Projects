@@ -6,10 +6,10 @@ let loadingSpinner = document.getElementsByClassName('loading-spinner')
 let newQuoteBtn = document.getElementById('newQuoteBtn')
 let tweetBtn = document.getElementById('tweet-btn')
 
+// Fetches quotes and updates the DOM
 const getQuotes = async ()=>{
     let apiURL = 'https://type.fit/api/quotes';
-    quoteWrapper[0].style.display='none';
-    loadingSpinner[0].style.display='block';
+    showLoader()
     try{
 
         let resp = await fetch(apiURL);
@@ -27,16 +27,26 @@ const getQuotes = async ()=>{
         console.log("error -->",error)
     }
     setTimeout(()=>{
-        quoteWrapper[0].style.display='block';
-        loadingSpinner[0].style.display='none';
+      hideLoder()
     },500)
    
    
 }
 
+// Shows loading spinner
+let showLoader = ()=>{
+    quoteWrapper[0].style.display='none';
+    loadingSpinner[0].style.display='block';
+}
+
+// Hides loading spinner
+let hideLoder = ()=>{
+    quoteWrapper[0].style.display='block';
+    loadingSpinner[0].style.display='none';
+}
+
 // Tweet quote
 tweetBtn.addEventListener('click',()=>{
-    
     window.open(`https://twitter.com/intent/tweet?text=${quote[0].innerText}`,'_blank')
 })
 
