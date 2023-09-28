@@ -5,10 +5,10 @@ let errorText = document.getElementById('error-text')
 
 let ready = false;
 let loadedImages = 0;
-let count = 5;
+let count = 10;
 let photosArray = []
 // Unsplash API
-let API_KEY = 'HWuhCHW11ItQv6h4O66Aw0EBGvimFjejWweXr3F4A2E'
+let API_KEY = 'API_KEY_HERE'
 let API = `https://api.unsplash.com/photos/random/?client_id=${API_KEY}&count=${count}&orientation=landscape`
 
 
