@@ -8,7 +8,7 @@ let loadedImages = 0;
 let count = 10;
 let photosArray = []
 // Unsplash API
-let API_KEY = 'API_KEY_HERE'
+let API_KEY = 'API_KEY'
 let API = `https://api.unsplash.com/photos/random/?client_id=${API_KEY}&count=${count}&orientation=landscape`
 
 
@@ -56,14 +56,16 @@ async function getPictures(){
     try{
         let resp = await fetch(API);
         let photos = await resp.json()
+        if(photos.errors){
+            throw photos.errors[0];
+        }
         photosArray=photos;
         displayPictures()
         loadingContainer.classList.remove('loading-icon-initial')
 
     }catch(error){
-      
         errorContainer.hidden = false;
-        errorText.innerText = error?.message
+        errorText.innerText = typeof error == 'string' ? error :  error?.message
     }finally{
         loadingContainer.hidden = true;
     }
