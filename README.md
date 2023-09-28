@@ -1,7 +1,8 @@
-```markdown
 # Infinite Scroller with Unsplash Images
 
-https://github.com/hassanalimalek/JS-Projects/assets/69761391/4f4c73d8-8ade-40b0-aaf7-e0864a487520
+
+https://github.com/hassanalimalek/JS-Projects/assets/69761391/c189e21a-d176-4171-9ee3-b7deae822650
+
 
 
 An infinite scroller web application that displays images fetched from [Unsplash](https://unsplash.com/). Users can scroll down to load more images endlessly.
@@ -52,6 +53,4 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
 
-```
 
-Make sure to replace the placeholders (`yourusername`, `your-demo-link.com`, and `Your Name`) with your actual information. Additionally, customize the installation, usage, and configuration sections to match the specifics of your project.
