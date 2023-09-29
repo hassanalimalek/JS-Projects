@@ -1,5 +1,8 @@
 # Picture-in-Picture Web App
 
+<img width="1440" alt="Screenshot 2023-09-29 at 8 21 24 PM" src="https://github.com/hassanalimalek/JS-Projects/assets/69761391/20e00629-eeef-4f7a-9112-9a6f9316bc88">
+
+
 ## Description
 
 This is a simple web application that allows users to display their screen in a picture-in-picture mode. The project is created using HTML5, CSS3, and JavaScript. It utilizes the `navigator.mediaDevices.getDisplayMedia` method to capture the screen and displays it in a floating window that can be moved and resized on top of other windows.
