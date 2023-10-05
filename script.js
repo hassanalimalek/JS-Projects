@@ -32,6 +32,7 @@ const days = hours * 24;
 // Updates UI as per the submitted task values
 function updateUI(){
     countDownTitleEl.innerText=countDownTitle;
+
     timeInterval = setInterval(()=>{
         let targetDate = new Date(countDownTargetDate).getTime();
         let difference = targetDate - new Date().getTime();
@@ -48,6 +49,7 @@ function updateUI(){
                 year: 'numeric'
               }).replace(/\//g, '-').replace(', ', ' ');
             completeInfo.innerText = `Completion Time : ${taskCompletedTime}`
+            localStorage.removeItem('taskInfo')
             clearInterval(timeInterval)
         }
         else{
@@ -62,8 +64,13 @@ function updateUI(){
         })
         inputContainer.hidden = true
         countDownContainer.hidden=false
+       
         }
     },1000)
+    localStorage.setItem('taskInfo',JSON.stringify({
+        countDownTitle,
+        countDownTargetDate
+    }))
    
 }
 
@@ -82,6 +89,18 @@ function reset(){
     inputContainer.hidden = false;
     countDownContainer.hidden=true;
     finishContainer.hidden=true;
+    localStorage.removeItem('taskInfo')
+}
+
+// Fetching Task from local storage if it exists and updating UI accordingly
+let taskItem = localStorage.getItem('taskInfo');
+if(taskItem){
+    let taskParsed = JSON.parse(taskItem)
+    countDownTitle = taskParsed.countDownTitle;
+    countDownTargetDate = taskParsed.countDownTargetDate;
+    countDownContainer.hidden=false;
+    inputContainer.hidden=true;
+    updateUI()
 }
 
 // Event Listeners
