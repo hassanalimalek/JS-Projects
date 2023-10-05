@@ -48,7 +48,6 @@ function updateUI(){
                 year: 'numeric'
               }).replace(/\//g, '-').replace(', ', ' ');
             completeInfo.innerText = `Completion Time : ${taskCompletedTime}`
-            console.log(taskCompletedTime);
             clearInterval(timeInterval)
         }
         else{
@@ -73,7 +72,6 @@ function startCountDown(e){
     e.preventDefault();
     countDownTitle = e.target[0].value;
     countDownTargetDate = e.target[1].value;
- 
     updateUI()
 }
 
