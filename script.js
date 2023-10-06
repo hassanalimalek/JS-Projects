@@ -96,9 +96,11 @@ function changePlayerSpeed(e){
 let fullScreen = false;
 
 function fullScreenChange(){
+    video.classList.toggle('video-full-screen')
     if(!fullScreen){
         fullScreen=true;
         openFullscreen(player)
+
     }else{
         fullScreen=false
         closeFullscreen()
