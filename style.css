@@ -36,13 +36,14 @@ body {
 video {
   border-radius: 5px;
   max-width: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /* Containers */
 .show-controls {
   width: 100%;
   height: 30%;
-  background: dodgerblue;
   z-index: 2;
   position: absolute;
   bottom: 0;
@@ -91,11 +92,14 @@ video {
   left: 15px;
   top: 15px;
   cursor: pointer;
+  height: 10px;
+  width: calc(100% - 30px);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .progress-bar {
   background: var(--primary-color);
-  width: 50%;
+  width: 0%;
   height: 100%;
   border-radius: 10px;
   transition: all 0.5s ease;
@@ -152,7 +156,10 @@ video {
   justify-content: flex-end;
   margin-right: 15px;
 }
-
+.player-speed {
+  color: white;
+  background: transparent;
+}
 .speed,
 .time {
   position: relative;

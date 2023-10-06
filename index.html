@@ -20,7 +20,7 @@
     <!-- https://assets.mixkit.co/videos/preview/mixkit-thunderstorm-at-night-4422-large.mp4 -->
     <!-- Car Driving -->
     <!-- https://assets.mixkit.co/videos/preview/mixkit-highway-in-the-middle-of-a-mountain-range-4633-large.mp4 -->
-    <div class="player">
+    <div id="player" class="player">
       <video class="video">
         <source
           src="https://assets.mixkit.co/videos/preview/mixkit-highway-in-the-middle-of-a-mountain-range-4633-large.mp4"
@@ -58,19 +58,23 @@
               <div class="controls-right">
                 <!-- Speed -->
                 <div class="speed" title="Change Speed">
-                  <select name="playbackRate" class="player-speed">
-                    <option value="0.25">0.25 X</option>
-                    <option value="0.5">0.5 X</option>
-                    <option value="1" selected>1 X</option>
-                    <option value="1.25">1.25 X</option>
-                    <option value="1.5">1.5 X</option>
-                    <option value="2">2 X</option>
+                  <select
+                    id="player-speed"
+                    name="playbackRate"
+                    class="player-speed"
+                  >
+                    <option value="0.25">0.25x</option>
+                    <option value="0.5">0.5x</option>
+                    <option value="1" selected>1x</option>
+                    <option value="1.25">1.25x</option>
+                    <option value="1.5">1.5x</option>
+                    <option value="2">2x</option>
                   </select>
                 </div>
                 <!-- Time -->
                 <div class="time">
                   <span class="time-elapsed">0:00 /</span>
-                  <span class="span-duration">2:38</span>
+                  <span class="span-duration">0:00</span>
                 </div>
                 <!-- Full Screen -->
                 <div class="fullscreen">
