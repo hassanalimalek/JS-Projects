@@ -10,7 +10,7 @@ const volumeBar = document.querySelector ('.volume-bar');
 const currentTimeEl = document.querySelector('.time-elapsed');
 const durationEl = document.querySelector('.span-duration');
 const playerSpeedEl = document.getElementById('player-speed')
-const fullscreenBtn = document.querySelector('.fullscreen');
+const fullscreenBtn = document.querySelector('#fullScreenBtn');
 
 // Play & Pause ----------------------------------- //
 
@@ -97,12 +97,15 @@ let fullScreen = false;
 
 function fullScreenChange(){
     video.classList.toggle('video-full-screen')
+    console.log("  fullscreenBtn.classList -->",  fullscreenBtn.classList)
     if(!fullScreen){
         fullScreen=true;
+        fullscreenBtn.classList.replace('fa-expand','fa-compress')
         openFullscreen(player)
 
     }else{
         fullScreen=false
+        fullscreenBtn.classList.replace('fa-compress','fa-expand')
         closeFullscreen()
     }
     // video.requestFullscreen()
